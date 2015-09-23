@@ -56,7 +56,21 @@ class NumberSummary
 		end
 
 		def q3(array)
-			
+			if array.length % 2 == 0
+				new_arr = array[(array.length/2)..array.length]
+				if new_arr.length % 2 == 0
+					(new_arr[new_arr.length / 2].to_f + new_arr[(new_arr.length / 2) - 1].to_f) / 2
+				else
+					new_arr[((new_arr.length + 1) / 2) - 1]
+				end
+			else
+				new_arr = array[((array.length + 1)/2)..array.length]
+				if new_arr.length % 2 == 0
+					(new_arr[new_arr.length / 2].to_f + new_arr[(new_arr.length / 2) - 1].to_f) / 2
+				else
+					new_arr[((new_arr.length + 1) / 2) - 1]
+				end
+			end
 		end
 
 	end
