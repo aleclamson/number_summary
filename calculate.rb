@@ -1,6 +1,6 @@
 require_relative 'number_summary'
 
-a = (1..9).map { |i| i }
+a = (1..7).map { |i| i }
 print a, "\n"
 
 print "Mode is " + NumberSummary.mode(a).to_s, "\n"
@@ -18,3 +18,5 @@ puts "q3 is " + NumberSummary.q3(a).to_s
 puts "median is " + NumberSummary.median(a).to_s
 
 puts "mean is " + NumberSummary.mean(a).to_s
+
+# 1,2,3,4,5,6,7
