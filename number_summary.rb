@@ -4,11 +4,6 @@ class NumberSummary
 	
 	class << self
 
-		# file = File.open("data.csv", "r")
-		# data = file.read
-
-		# array = data.split(",")
-		
 		def max(array)
 			array.max
 		end
@@ -73,6 +68,18 @@ class NumberSummary
 			end
 		end
 
-	end
+		def sigma(array)
+			average = mean(array)
+			newArray = []
+			for i in 1..array.length
+				newArray[i-1] = (array[i-1].to_f - average) ** 2
+			end
+			newSum = 0.0
+			for i in 1..newArray.length
+				newSum += newArray[i-1].to_f
+			end
+			Math.sqrt(newSum / array.length)
+		end
 
+	end
 end
