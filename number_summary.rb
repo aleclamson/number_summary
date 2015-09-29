@@ -119,6 +119,7 @@ class NumberSummary
 			puts "q3: " + q3(a).to_s
 			puts "mode: " + mode(a).to_s
 			puts "sigma: " + sigma(a).to_s
+			Math.sqrt(newSum / array.length)
 		end
 
 	end
