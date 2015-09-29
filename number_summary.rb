@@ -93,6 +93,7 @@ class NumberSummary
 
 		def sigma(array)
 			average = mean(array)
+			puts average
 			newArray = []
 			for i in 1..array.length
 				newArray[i-1] = (array[i-1].to_f - average) ** 2
@@ -101,7 +102,7 @@ class NumberSummary
 			for i in 1..newArray.length
 				newSum += newArray[i-1].to_f
 			end
-			Math.sqrt(newSum / array.length).to_f
+			Math.sqrt(newSum / (array.length - 1)).to_f
 		end
 
 		def summarize(file)
